@@ -1,0 +1,97 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".HangmanMainActivity"
+    android:background="@android:color/darker_gray">
+
+    <TextView
+        android:text="@string/text_title"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/title" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/linearLayout1"
+        android:layout_above="@+id/linearLayout3"
+        android:layout_centerHorizontal="true">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/linearLayout2">
+
+            <TextView
+                android:text="@string/text_above_clue"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/clue1" />
+
+            <TextView
+                android:textSize="20sp"
+                android:layout_width="match_parent"
+                android:maxWidth="110dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/clue2" />
+
+            <TextView
+                android:text="@string/text_above_letters_guessed"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/letters_guessed1"/>
+
+            <TextView
+                android:textSize="20sp"
+                android:layout_width="match_parent"
+                android:maxWidth="110dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/letters_guessed2"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/hangman6"
+            android:id="@+id/hangman_image" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout3"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true">
+
+        <EditText
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:id="@+id/user_input" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_guess_button"
+            android:onClick="guessButtonClicked"
+            android:id="@+id/guess_button"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
