@@ -16,7 +16,6 @@ public class ExitDialogFragment extends DialogFragment {
         theDialog.setTitle(R.string.text_exit_dialog_title);
         theDialog.setMessage(R.string.text_exit_dialog_message);
 
-        // The user
         theDialog.setPositiveButton(R.string.text_exit_dialog_positive, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
