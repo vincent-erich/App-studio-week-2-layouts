@@ -27,13 +27,9 @@ public class HangmanHelpActivity extends AppCompatActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
+        // Finish this activity (i.e., go back to HangmanMainActivity.java).
         if (id == R.id.action_back) {
-            //startActivity(new Intent(getApplicationContext(), HangmanMainActivity.class));
             finish();
-            return true;
-        }
-        //noinspection SimplifiableIfStatement
-        else if (id == R.id.action_settings) {
             return true;
         }
 

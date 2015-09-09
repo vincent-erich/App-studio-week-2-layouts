@@ -7,31 +7,27 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import android.widget.Toast;
 
-/**
- * Created by Vincent on 7-9-2015.
- */
 public class ExitDialogFragment extends DialogFragment {
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
-
+        // Create the dialog.
         AlertDialog.Builder theDialog = new AlertDialog.Builder(getActivity());
+        theDialog.setTitle(R.string.text_exit_dialog_title);
+        theDialog.setMessage(R.string.text_exit_dialog_message);
 
-        theDialog.setTitle("Exit");
-
-        theDialog.setMessage("Do you really want to exit?");
-
-        theDialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+        // The user
+        theDialog.setPositiveButton(R.string.text_exit_dialog_positive, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                Toast.makeText(getActivity(), "Exit ok.", Toast.LENGTH_SHORT).show();
+                getActivity().finish();
             }
         });
 
-        theDialog.setNegativeButton("CANCEL", new DialogInterface.OnClickListener() {
+        theDialog.setNegativeButton(R.string.text_exit_dialog_negative, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                Toast.makeText(getActivity(), "Exit canceled.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), R.string.text_exit_dialog_negative_2, Toast.LENGTH_SHORT).show();
             }
         });
 

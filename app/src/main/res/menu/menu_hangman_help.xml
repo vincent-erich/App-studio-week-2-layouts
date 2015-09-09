@@ -4,15 +4,9 @@
     tools:context="com.example.vincent.hangman.HangmanHelpActivity">
 
     <item
-        android:id="@+id/action_settings"
-        android:title="@string/action_settings"
-        android:orderInCategory="100"
-        app:showAsAction="never" />
-
-    <item
         android:title="@string/action_back"
         app:showAsAction="ifRoom|withText"
-        android:orderInCategory="101"
+        android:orderInCategory="100"
         android:id="@+id/action_back" />
 
 </menu>

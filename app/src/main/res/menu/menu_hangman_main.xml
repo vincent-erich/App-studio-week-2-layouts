@@ -4,27 +4,21 @@
     tools:context=".HangmanMainActivity">
 
     <item
-        android:id="@+id/action_new_game"
         android:title="@string/action_new_game"
         android:orderInCategory="100"
-        app:showAsAction="never" />
+        app:showAsAction="never"
+        android:id="@+id/action_new_game" />
 
     <item
-        android:id="@+id/action_help"
         android:title="@string/action_help"
         android:orderInCategory="101"
-        app:showAsAction="never" />
-
-    <item
-        android:id="@+id/action_settings"
-        android:title="@string/action_settings"
-        android:orderInCategory="102"
-        app:showAsAction="never" />
+        app:showAsAction="never"
+        android:id="@+id/action_help" />
 
     <item
         android:title="@string/action_exit"
+        android:orderInCategory="102"
         app:showAsAction="ifRoom|withText"
-        android:orderInCategory="103"
         android:id="@+id/action_exit" />
 
 </menu>
