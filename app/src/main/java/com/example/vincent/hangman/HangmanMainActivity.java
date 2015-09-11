@@ -52,7 +52,7 @@ public class HangmanMainActivity extends AppCompatActivity {
         words = getResources().getStringArray(R.array.words);
         randomGenerator = new Random();
         randomGeneratedWord = words[randomGenerator.nextInt(words.length)];
-        System.out.println("Generated word: " + randomGeneratedWord);
+        System.out.println("Generated word (onCreate): " + randomGeneratedWord);
 
         nWrongGuesses = 0;
         lettersGuessed = new ArrayList<String>();
@@ -109,7 +109,7 @@ public class HangmanMainActivity extends AppCompatActivity {
     private void createNewGame() {
         // Start/create a new game (i.e., set all the properties to their default value).
         randomGeneratedWord = words[randomGenerator.nextInt(words.length)];
-        System.out.println("Generated word: " + randomGeneratedWord);
+        System.out.println("Generated word (createNewGame): " + randomGeneratedWord);
         showInitialClue();
         lettersGuessed = new ArrayList<String>();
         textLettersGuessed.setText("");
@@ -209,10 +209,25 @@ public class HangmanMainActivity extends AppCompatActivity {
         // Show the letters guessed thus far.
         String text = lettersGuessed.get(0);
         for (int i=1; i<lettersGuessed.size(); i++) {
-            text = text + " " + lettersGuessed.get(i);
+            text = text + ", " + lettersGuessed.get(i);
         }
         textLettersGuessed.setText(text);
     }
+
+    /*
+    Due to time constraints, it was not possible to implement the data retention when the screen
+    is rotated.
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+    }
+    */
 
 }
 
